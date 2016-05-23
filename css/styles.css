@@ -12,7 +12,11 @@ body {
 }
 
 .catalogue .item {
-  margin-top: 75px;
+  margin-top: 15px;
+}
+
+.sort-order {
+  margin-top: 25px;
 }
 
 .potion {
@@ -54,4 +58,16 @@ body {
   font-weight: bold;
   color: #93D3C3;
   text-shadow: 2px 2px 1px black;
+}
+
+.select-item select {
+  width: 50px;
+}
+
+.select-item button {
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
 }
