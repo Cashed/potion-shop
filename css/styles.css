@@ -5,6 +5,7 @@
 
 body {
   background-image: linear-gradient(to bottom right, #222222, #092639);
+  height: calc(100%-50px);
 }
 
 .navbar {
