@@ -11,7 +11,6 @@
     var getPots = function() {
       return $http.get('app/data/pots.json').then(
         function(pots) {
-          console.log(pots.data.potions);
           return pots.data.potions;
         }
       );

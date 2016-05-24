@@ -22,9 +22,12 @@
     <script src='app/app.js'></script>
     <script src='app/config.js'></script>
     <script src='app/data/potData-service.js'></script>
-    <script src='app/items/pot-controller.js'></script>
+    <script src='app/potions/pot-controller.js'></script>
+
+    <!-- supersonic -->
+    <base href="/">
   </head>
-  <body ng-controller='Pots as pots'>
+  <body>
     <nav class="navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -58,88 +61,7 @@
       </div>
       <!-- /.container-fluid -->
     </nav>
-    <section class='menu container'>
-      <div class='row form-row'>
-        <form name='searchForm'>
-          <div class='col-md-3'>
-            <p>Search by Category</p>
-            <div class='input-group'>
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Select
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <p>Search by Name</p>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </form>
-        <div class='col-md-3 col-md-push-2'>
-          <p>Checkout</p>
-          <a href="#" class="btn btn-warning">Bag of Holding <span class='badge'>0</span></a>
-        </div>
-      </div>
-    </section>
-    <section class='catalogue container'>
-      <div class='row sort-order'>
-        <div class='col-md-2 col-md-offset-9'>
-          <label for='sort-order'>Sort by Price:</label>
-          <select name="sort-order" class="form-control">
-            <option value="highest">High to Low</option>
-            <option value="lowest">Low to High</option>
-          </select>
-        </div>
-      </div>
-      <div ng-repeat='pot in pots.potList' class='row item'>
-        <div class='potion col-md-3'>
-          <img ng-src='{{ pot.imageUrl }}'/>
-        </div>
-        <div class='scroll col-md-9'>
-          <div class='row'>
-            <div class='col-md-9'>
-              <h1>{{ pot.name }}</h1>
-              <ul class='info'>
-                <li><span class='info-cat'>Price: </span>{{ pot.price }}</li>
-                <li><span class='info-cat'>Boon Rating: </span>{{ pot.caffeineScale }}</li>
-                <li><span class='info-cat'>Rating:</span>{{ pot.rating }} </li>
-                <li><span class='info-cat'>In Stock: </span> {{ pot.inStock }}</li>
-                <li><span class='info-cat'>Categories:</span>
-                  <ul>
-                    <li ng-repeat='category in {{ pots.categories }}'>{{ category }}</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <div class='col-md-3 select-item'>
-              <label for='qty'>Qty:</label>
-              <select name="qty" id="" class="form-control">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-              <button class='btn btn-success'>Add to Bag</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div ng-view ></div>
     <footer> &copy2016 MEAN Pots </footer>
   </body>
 </html>

@@ -5,12 +5,11 @@
     .module('ShoppingCart')
     .controller('Pots', Pots);
 
-  Pots.$inject = ['$scope', 'potData', 'pots'];
+  Pots.$inject = ['$scope', 'potions'];
 
-  function Pots($scope, pots) {
+  function Pots($scope, potions) {
     var vm = this;
-    console.log('working');
 
-    vm.potList = pots;
+    vm.potList = potions;
   }
 })();
