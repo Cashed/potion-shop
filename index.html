@@ -21,8 +21,10 @@
     <script src='app/js/angular-messages.js'></script>
     <script src='app/app.js'></script>
     <script src='app/config.js'></script>
+    <script src='app/data/potData-service.js'></script>
+    <script src='app/items/pot-controller.js'></script>
   </head>
-  <body>
+  <body ng-controller='Pots as pots'>
     <nav class="navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -103,23 +105,22 @@
           </select>
         </div>
       </div>
-      <div class='row item'>
+      <div ng-repeat='pot in pots.potList' class='row item'>
         <div class='potion col-md-3'>
-          <img src='images/potion1.png'/>
+          <img ng-src='{{ pot.imageUrl }}'/>
         </div>
         <div class='scroll col-md-9'>
           <div class='row'>
             <div class='col-md-9'>
-              <h1>Stone Skin</h1>
+              <h1>{{ pot.name }}</h1>
               <ul class='info'>
-                <li><span class='info-cat'>Price: </span> 213213</li>
-                <li><span class='info-cat'>Boon Rating: </span> 244</li>
-                <li><span class='info-cat'>Rating:</span> </li>
-                <li><span class='info-cat'>In Stock: </span> Yes</li>
+                <li><span class='info-cat'>Price: </span>{{ pot.price }}</li>
+                <li><span class='info-cat'>Boon Rating: </span>{{ pot.caffeineScale }}</li>
+                <li><span class='info-cat'>Rating:</span>{{ pot.rating }} </li>
+                <li><span class='info-cat'>In Stock: </span> {{ pot.inStock }}</li>
                 <li><span class='info-cat'>Categories:</span>
                   <ul>
-                    <li>dark</li>
-                    <li>cold</li>
+                    <li ng-repeat='category in {{ pots.categories }}'>{{ category }}</li>
                   </ul>
                 </li>
               </ul>

@@ -1,3 +1,5 @@
+/**********  General  **********/
+
 @font-face {
   font-family: 'Rye';
   src: url('../fonts/Rye-Regular.ttf');
@@ -11,6 +13,8 @@ body {
 .navbar {
   background-color: #0B324C;
 }
+
+/**********   Items   ************/
 
 .catalogue .item {
   margin-top: 15px;
