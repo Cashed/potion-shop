@@ -10,11 +10,18 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Hot</a></li>
+              <li><a href="#">Warm</a></li>
+              <li><a href="#">Cold</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Awesome</a></li>
+              <li><a href="#">Lucid</a></li>
+              <li><a href="#">Dark</a></li>
+              <li><a href="#">Dry</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Winter</a></li>
+              <li><a href="#">Spring</a></li>
+              <li><a href="#">Summer</a></li>
             </ul>
           </div>
         </div>
@@ -45,7 +52,7 @@
       </select>
     </div>
   </div>
-  <div ng-repeat='pot in pots.potList' class='row item'>
+  <div ng-repeat='pot in pots.potList | orderBy:pots.sortBy' class='row item'>
     <pot-item pot='pot'></pot-item>
   </div>
 </section>

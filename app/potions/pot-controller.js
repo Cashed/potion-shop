@@ -11,5 +11,10 @@
     var vm = this;
 
     vm.potList = potions;
+    vm.sortBy = 'name';
+
+    vm.reSort = function(sort) {
+      vm.sortBy = sort;
+    };
   }
 })();
