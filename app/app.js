@@ -3,9 +3,12 @@
 
   angular
     .module('ShoppingCart', [
+        // angular
         'ngAnimate',
         'ngMessages',
-        'ngRoute'
+        'ngRoute',
+        // custom
+        'potItem'
     ]
   );
 })();

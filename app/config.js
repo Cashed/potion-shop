@@ -10,7 +10,7 @@
   function router($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/potions/pots.html',
+        templateUrl: 'app/potions/pot-menu.html',
         controller: 'Pots',
         controllerAs: 'pots',
         resolve: {

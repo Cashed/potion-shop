@@ -1,0 +1,51 @@
+<section class='menu container'>
+  <div class='row form-row'>
+    <form name='searchForm'>
+      <div class='col-md-3'>
+        <p>Search by Category</p>
+        <div class='input-group'>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Select
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p>Search by Name</p>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+    </form>
+    <div class='col-md-3 col-md-push-2'>
+      <p>Checkout</p>
+      <a href="#" class="btn btn-warning">Bag of Holding <span class='badge'>0</span></a>
+    </div>
+  </div>
+</section>
+<section class='catalogue container'>
+  <div class='row sort-order'>
+    <div class='col-md-2 col-md-offset-9'>
+      <label for='sort-order'>Sort by Price:</label>
+      <select name="sort-order" class="form-control">
+        <option value="highest">High to Low</option>
+        <option value="lowest">Low to High</option>
+      </select>
+    </div>
+  </div>
+  <div ng-repeat='pot in pots.potList' class='row item'>
+    <pot-item pot='pot'></pot-item>
+  </div>
+</section>
