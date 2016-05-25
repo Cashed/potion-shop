@@ -2,13 +2,14 @@
   <div class='potion col-md-3'>
     <img ng-src='{{ pot.imageUrl }}'/>
   </div>
-  <div class='scroll col-md-9'>
+  <div class='scroll col-md-8'>
     <div class='row'>
-      <div class='col-md-9'>
+      <div class='col-md-8 col-md-offset-1'>
         <h1>{{ pot.name }}</h1>
         <ul class='info'>
           <li><span class='info-cat'>Price: </span>{{ pot.price }}</li>
           <li><span class='info-cat'>Boon Rating: </span>{{ pot.caffeineScale }}</li>
+          <li><span class='info-cat'>Ingredients: </span>{{ pot.ingredients }}</li>
           <li><span class='info-cat'>Rating:</span>{{ pot.rating }} </li>
           <li><span class='info-cat'>In Stock: </span> {{ pot.inStock }}</li>
           <li><span class='info-cat'>Categories:</span>
@@ -18,7 +19,7 @@
           </li>
         </ul>
       </div>
-      <div class='col-md-3 select-item'>
+      <div class='col-md-2 select-item'>
         <label for='qty'>Qty:</label>
         <select name="qty" id="" class="form-control">
           <option value="1">1</option>

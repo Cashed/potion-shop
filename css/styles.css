@@ -35,7 +35,6 @@ body {
 
 .scroll {
   margin-left: 25px;
-  width: 500px;
   background-image: url('../images/paper.png');
   background-size: cover;
   background-position: center;
@@ -67,10 +66,12 @@ body {
 
 .select-item select {
   width: 50px;
+  display: inline-block;
 }
 
 .select-item button {
   margin-top: 10px;
+  display: inline-block;
 }
 
 footer {
