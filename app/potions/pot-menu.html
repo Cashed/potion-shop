@@ -1,6 +1,6 @@
 <section class='menu container'>
   <div class='row form-row'>
-    <form name='searchForm'>
+    <form name='searchForm' role='search'>
       <div class='col-md-3'>
         <p>Search by Category</p>
         <div class='input-group'>
@@ -10,7 +10,7 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Hot</a></li>
+              <li><a ng-click='pot.sortBy("hot")' href="#">Hot</a></li>
               <li><a href="#">Warm</a></li>
               <li><a href="#">Cold</a></li>
               <li role="separator" class="divider"></li>
@@ -27,12 +27,9 @@
         </div>
       </div>
       <div class="col-md-4">
-        <p>Search by Name</p>
+        <p>Search Catalogue</p>
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
-          </span>
+          <input ng-model='searchText' type="text" class="form-control" placeholder="Search for...">
         </div>
       </div>
     </form>
@@ -46,13 +43,13 @@
   <div class='row sort-order'>
     <div class='col-md-2 col-md-offset-9'>
       <label for='sort-order'>Sort by Price:</label>
-      <select name="sort-order" class="form-control">
-        <option value="highest">High to Low</option>
-        <option value="lowest">Low to High</option>
+      <select ng-model='pots.sortBy' name="sort-order" class="form-control">
+        <option value="-price">High to Low</option>
+        <option value="price">Low to High</option>
       </select>
     </div>
   </div>
-  <div ng-repeat='pot in pots.potList | orderBy:pots.sortBy' class='row item'>
+  <div ng-repeat='pot in pots.potList | filter:searchText | orderBy:pots.sortBy' class='row item'>
     <pot-item pot='pot'></pot-item>
   </div>
 </section>
