@@ -12,6 +12,11 @@
 
     vm.potList = potions;
     vm.sortBy = 'name';
+    vm.pullDown = '';
+
+    vm.sortByPullDown = function(category) {
+      vm.pullDown = category;
+    };
 
     vm.reSort = function(sort) {
       vm.sortBy = sort;

@@ -10,23 +10,23 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a ng-click='pot.sortBy("hot")' href="#">Hot</a></li>
-              <li><a href="#">Warm</a></li>
-              <li><a href="#">Cold</a></li>
+              <li><a ng-click='pots.sortByPullDown("hot")' href="#">Hot</a></li>
+              <li><a ng-click='pots.sortByPullDown("warm")' href="#">Warm</a></li>
+              <li><a ng-click='pots.sortByPullDown("cold")' href="#">Cold</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Awesome</a></li>
-              <li><a href="#">Lucid</a></li>
-              <li><a href="#">Dark</a></li>
-              <li><a href="#">Dry</a></li>
+              <li><a ng-click='pots.sortByPullDown("awesome")' href="#">Awesome</a></li>
+              <li><a ng-click='pots.sortByPullDown("lucid")' href="#">Lucid</a></li>
+              <li><a ng-click='pots.sortByPullDown("dark")' href="#">Dark</a></li>
+              <li><a ng-click='pots.sortByPullDown("dry")' href="#">Dry</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">Winter</a></li>
-              <li><a href="#">Spring</a></li>
-              <li><a href="#">Summer</a></li>
+              <li><a ng-click='pots.sortByPullDown("winter")' href="#">Winter</a></li>
+              <li><a ng-click='pots.sortByPullDown("spring")' href="#">Spring</a></li>
+              <li><a ng-click='pots.sortByPullDown("summer")' href="#">Summer</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <p>Search Catalogue</p>
         <div class="input-group">
           <input ng-model='searchText' type="text" class="form-control" placeholder="Search for...">
@@ -50,6 +50,6 @@
     </div>
   </div>
   <div ng-repeat='pot in pots.potList | filter:searchText | orderBy:pots.sortBy' class='row item'>
-    <pot-item pot='pot'></pot-item>
+    <pot-item pot='pot' category='pots.pullDown'></pot-item>
   </div>
 </section>
