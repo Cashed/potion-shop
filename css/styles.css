@@ -20,6 +20,16 @@ body {
   position: absolute;
 }
 
+.reviews {
+  height: 175px;
+  width: 500px;
+  background-image: radial-gradient(#083A5E, #010E16);
+  opacity: .5;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 5px black;
+  border: 1px solid grey;
+}
+
 /**********   Potions   ************/
 
 .catalogue .item {

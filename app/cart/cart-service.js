@@ -15,7 +15,6 @@
       }
 
       cart[pot._id] = qty;
-      console.log(pot._id + ' ' + cart[pot._id]);
     };
 
     var getCartSize =  function() {
