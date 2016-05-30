@@ -14,7 +14,10 @@
           pots: '='
         },
         replace: true,
-        templateUrl: 'app/potions/pots.html'
+        templateUrl: 'app/potions/pots.html',
+        controller: function($scope) {
+          var vm = this;
+        }
       }
     }
 })();

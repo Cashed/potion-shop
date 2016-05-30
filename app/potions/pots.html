@@ -20,9 +20,9 @@
         </ul>
       </div>
       <div class='col-md-2 select-item'>
-        <form name='buy-pot' ng-submit='pots.addToCart(pot, pots.qty)'>
+        <form name='buy-pot' ng-submit='pots.addToCart(pot, vm.qty)'>
           <label for='qty'>Qty:</label>
-          <select ng-model='pots.qty' name="qty" class="form-control">
+          <select ng-model='vm.qty' name="qty" class="form-control">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
