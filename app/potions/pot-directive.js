@@ -10,7 +10,8 @@
         restrict: 'E',
         scope: {
           pot: '=',
-          category: '='
+          category: '=',
+          pots: '='
         },
         replace: true,
         templateUrl: 'app/potions/pots.html'

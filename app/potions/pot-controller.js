@@ -13,6 +13,10 @@
     vm.potList = potions;
     vm.pullDown = '';
 
+    vm.addToCart = function(pot) {
+      
+    }
+
     vm.sortByPullDown = function(category) {
       vm.pullDown = category;
     };

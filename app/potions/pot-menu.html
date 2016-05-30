@@ -1,6 +1,7 @@
 <section class='menu container'>
   <div class='row form-row'>
     <form name='searchForm' role='search'>
+    <!-- *****************  Dropdown Menu ******************* -->
       <div class='col-md-3'>
         <p>Search by Category</p>
         <div class='input-group'>
@@ -26,6 +27,7 @@
           </div>
         </div>
       </div>
+      <!-- ****************** Search Text Input ******************** -->
       <div class="col-md-5">
         <p>Search by Keyword</p>
         <div class="input-group">
@@ -33,6 +35,7 @@
         </div>
       </div>
     </form>
+    <!-- ****************** Checkout ******************* -->
     <div class='col-md-3 col-md-push-2'>
       <p>Checkout</p>
       <a href="#" class="btn btn-warning">Bag of Holding <span class='badge'>0</span></a>
@@ -40,6 +43,7 @@
   </div>
 </section>
 <section class='catalogue container'>
+  <!-- ******************** Price Sort *********************** -->
   <div class='row sort-order'>
     <div class='col-md-2 col-md-offset-9'>
       <label for='sort-order'>Sort by Price:</label>
@@ -49,7 +53,8 @@
       </select>
     </div>
   </div>
+  <!-- ******************* Potion List ********************* -->
   <div ng-repeat='pot in pots.potList | filter:searchText | orderBy:pots.sortBy' class='row item'>
-    <pot-item pot='pot' category='pots.pullDown'></pot-item>
+    <pot-item pot='pot' category='pots.pullDown' pots='pots'></pot-item>
   </div>
 </section>

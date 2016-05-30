@@ -6,8 +6,10 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom right, #222222, #092639);
-  height: calc(100%-50px);
+  background: url('../images/default-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #010E16;
 }
 
 .navbar {
@@ -86,6 +88,24 @@ body {
 .select-item button {
   margin-top: 10px;
   display: inline-block;
+}
+
+.ng-enter {
+  transition:0.2s linear all;
+  opacity:0;
+}
+
+.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.ng-leave {
+  transition:0.2s linear all;
+  opacity:1;
+}
+
+.ng-leave.ng-leave-active {
+  opacity:0;
 }
 
 footer {
