@@ -150,7 +150,7 @@ body {
 }
 
 .ng-enter.ng-enter-active {
-  opacity:0;
+  opacity:1;
 }
 
 .ng-leave {
@@ -160,6 +160,7 @@ body {
 
 .ng-leave.ng-leave-active {
   opacity:0;
+  display: none;
 }
 
 footer {

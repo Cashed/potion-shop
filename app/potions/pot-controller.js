@@ -16,7 +16,6 @@
     vm.bagSize = 0;
     vm.review = 0;
 
-
     vm.addToCart = function(pot, qty) {
       if (qty > 0) {
         cart.addItem(pot, qty);

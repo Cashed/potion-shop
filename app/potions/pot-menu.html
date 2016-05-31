@@ -104,7 +104,7 @@
     <!-- ****************** Checkout ******************* -->
     <div class='col-md-3 col-md-push-2'>
       <p>Checkout</p>
-      <a href="#" class="btn btn-warning">Bag of Holding <span class='badge'>{{ pots.bagSize }}</span></a>
+      <a href="/cart" class="btn btn-warning">Bag of Holding <span class='badge'>{{ pots.bagSize }}</span></a>
     </div>
   </div>
 </section>
@@ -122,6 +122,9 @@
   </div>
   <!-- ******************* Potion List ********************* -->
   <div ng-repeat='pot in pots.potList | filter:searchText | orderBy:pots.sortBy' class='row item'>
-    <pot-item pot='pot' category='pots.pullDown' pots='pots'></pot-item>
+    <pot-item pot='pot' category='pots.pullDown' pots='pots'>
+      <div ng-show='pot.categories.includes(category) || category === ""'></div>
+    </pot-item>
+
   </div>
 </section>

@@ -6,24 +6,36 @@
     .factory('cart', cart);
 
   function cart() {
-    var cart = {};
-    cart.size = 0;
+     var cart = [];
 
     var addItem = function(pot, qty) {
-      if (!cart.hasOwnProperty(pot._id)) {
-        cart.size += 1;
+      // check if pot is already in cart, if so, update qty
+      if (cart.length > 0) {
+        for (item in cart) {
+          if (item._id === pot._id) {
+            item.qty = qty;
+          }
+        }
       }
+      else {
+        pot.qty = qty;
 
-      cart[pot._id] = qty;
+        cart.push(pot);
+      }
     };
 
     var getCartSize =  function() {
-      return cart.size;
-    }
+      return cart.length;
+    };
+
+    var getCart = function() {
+      return cart;
+    };
 
     return {
       addItem: addItem,
-      getCartSize: getCartSize
+      getCartSize: getCartSize,
+      getCart: getCart
     }
   }
 })();

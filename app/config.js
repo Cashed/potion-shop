@@ -16,7 +16,13 @@
         resolve: {
           potions: getPots
         }
+      })
+      .when('/cart', {
+        templateUrl: 'app/cart/cart.html',
+        controller: 'CheckoutCart',
+        controllerAs: 'cart'
       });
+      
     $locationProvider.html5Mode(true);
   };
 
