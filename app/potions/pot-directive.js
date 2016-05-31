@@ -17,6 +17,8 @@
         templateUrl: 'app/potions/pots.html',
         controller: function($scope) {
           var vm = this;
+
+          vm.qty = 1;
         }
       }
     }

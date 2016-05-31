@@ -23,6 +23,7 @@
         <form name='buy-pot' ng-submit='pots.addToCart(pot, thisPot.qty)'>
           <label for='qty'>Qty:</label>
           <select ng-model='thisPot.qty' name="qty" class="form-control">
+            <option value="" selected>0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

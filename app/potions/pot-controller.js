@@ -26,8 +26,10 @@
       }, 7000);
 
     vm.addToCart = function(pot, qty) {
-      cart.addItem(pot, qty);
-      vm.bagSize = cart.getCartSize();
+      if (qty > 0) {
+        cart.addItem(pot, qty);
+        vm.bagSize = cart.getCartSize();
+      }
     };
 
     vm.sortByPullDown = function(category) {
