@@ -12,6 +12,7 @@
 
     vm.potList = potions;
     vm.pullDown = '';
+    vm.pullDownTitle = 'All';
     vm.bagSize = 0;
     vm.review = 0;
 
@@ -33,6 +34,13 @@
     };
 
     vm.sortByPullDown = function(category) {
+      if (category === '') {
+        vm.pullDownTitle = 'All';
+      }
+      else {
+        vm.pullDownTitle = category.charAt(0).toUpperCase() + category.slice(1);
+      }
+
       vm.pullDown = category;
     };
   }

@@ -65,10 +65,12 @@
         <div class='input-group'>
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Select
+              {{ pots.pullDownTitle }}
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a ng-click='pots.sortByPullDown("")' href="#">All</a></li>
+              <li role="separator" class="divider"></li>
               <li><a ng-click='pots.sortByPullDown("hot")' href="#">Hot</a></li>
               <li><a ng-click='pots.sortByPullDown("warm")' href="#">Warm</a></li>
               <li><a ng-click='pots.sortByPullDown("cold")' href="#">Cold</a></li>
