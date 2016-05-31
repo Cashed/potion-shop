@@ -54,6 +54,22 @@ body {
   color: orange;
 }
 
+.arrow {
+  padding: 65px 10px;
+}
+
+.arrow img {
+  width: 40px;
+}
+
+#left img {
+  float: right;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
 /**********   Potions   ************/
 
 .catalogue .item {
