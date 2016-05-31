@@ -10,19 +10,19 @@
 
     var addItem = function(pot, qty) {
       // check if pot is already in cart, if so, update qty
-      if (cart.length > 0) {
-        for (item in cart) {
-          if (item._id === pot._id) {
-            item.qty = qty;
-          }
+      var isUpdate = false;
+      cart.forEach(function(item) {
+        if (pot._id === item._id) {
+          item.qty = qty;
+          isUpdate = true;
         }
-      }
-      else {
-        pot.qty = qty;
+      });
 
+      if (!isUpdate) {
+        pot.qty = qty;
         cart.push(pot);
       }
-    };
+    }
 
     var getCartSize =  function() {
       return cart.length;

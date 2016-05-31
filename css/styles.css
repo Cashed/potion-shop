@@ -20,6 +20,29 @@ body {
   position: absolute;
 }
 
+.ng-enter {
+  transition:0.4s linear all;
+  opacity:0;
+}
+
+.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.ng-leave {
+  transition:0.4s linear all;
+  opacity:1;
+}
+
+.ng-leave.ng-leave-active {
+  opacity:0;
+  display: none;
+}
+
+footer {
+  text-align: center;
+}
+
 /*********** Reviews *************/
 
 .menu h4 {
@@ -144,25 +167,8 @@ body {
   display: inline-block;
 }
 
-.ng-enter {
-  transition:0.4s linear all;
-  opacity:0;
-}
+/************* Cart ***************/
 
-.ng-enter.ng-enter-active {
-  opacity:1;
-}
-
-.ng-leave {
-  transition:0.4s linear all;
-  opacity:1;
-}
-
-.ng-leave.ng-leave-active {
-  opacity:0;
-  display: none;
-}
-
-footer {
+.total {
   text-align: center;
 }

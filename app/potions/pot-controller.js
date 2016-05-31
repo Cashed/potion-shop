@@ -13,7 +13,7 @@
     vm.potList = potions;
     vm.pullDown = '';
     vm.pullDownTitle = 'All';
-    vm.bagSize = 0;
+    vm.bagSize = cart.getCartSize();
     vm.review = 0;
 
     vm.addToCart = function(pot, qty) {

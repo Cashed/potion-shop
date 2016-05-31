@@ -10,7 +10,6 @@
         restrict: 'E',
         scope: {
           pot: '=',
-          category: '=',
           pots: '='
         },
         replace: true,

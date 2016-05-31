@@ -122,9 +122,8 @@
   </div>
   <!-- ******************* Potion List ********************* -->
   <div ng-repeat='pot in pots.potList | filter:searchText | orderBy:pots.sortBy' class='row item'>
-    <pot-item pot='pot' category='pots.pullDown' pots='pots'>
-      <div ng-show='pot.categories.includes(category) || category === ""'></div>
-    </pot-item>
-
+    <div ng-show='pot.categories.includes(pots.pullDown) || pots.pullDown === ""'>
+      <pot-item pot='pot' pots='pots'></pot-item>
+    </div>
   </div>
 </section>

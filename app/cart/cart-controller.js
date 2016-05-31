@@ -11,6 +11,7 @@
     var vm = this;
 
     vm.potCart = cart.getCart();
-    console.log(vm.potCart);
+
+    
   }
 })();
