@@ -1,6 +1,61 @@
 <section class='menu container'>
+  <!-- ******************** Reviews ************************ -->
   <div class='row'>
-    <div class='col-md-6 col-md-offset-3 reviews'></div>
+    <h4>Customer Reviews</h4>
+    <div class='col-md-6 col-md-offset-3 reviews'>
+      <div class='row' ng-switch='pots.review'>
+        <div ng-switch-when='0'>
+          <div class='col-md-4'>
+            <img src='../../images/reviewers/barbarian.gif'>
+          </div>
+          <div class='col-md-8 review-detail'>
+            <p><em>"Oh I hate staining my hands with the blood of foul Sorcerers!"</em></p>
+            <p class='review-time'>Date: Approx. one year after the destruction of the Worldstone</p>
+            <p class='review-name'>Review By: The Barbarian</p>
+          </div>
+        </div>
+        <div ng-switch-when='1'>
+          <div class='col-md-4'>
+            <img src='../../images/reviewers/beaker.jpg'>
+          </div>
+          <div class='col-md-8 review-detail'>
+            <p><em>"Mimimi mimi mimimimimi mimi. Mimimi, mimi Mi mimimimimimimi mimimimi."</em></p>
+            <p class='review-time'>Date: 5/1/2016</p>
+            <p class='review-name'>Review By: Beaker</p>
+          </div>
+        </div>
+        <div ng-switch-when='2'>
+          <div class='col-md-4'>
+            <img src='../../images/reviewers/Bane.jpg'>
+          </div>
+          <div class='col-md-8 review-detail'>
+            <p><em>"You are beaten! Beg for mercy! SCREAM MY NAME!"</em></p>
+            <p class='review-time'>Date: 9/10/1994</p>
+            <p class='review-name'>Review By: Bane</p>
+          </div>
+        </div>
+        <div ng-switch-when='3'>
+          <div class='col-md-4'>
+            <img src='../../images/reviewers/Jareth.jpg'>
+          </div>
+          <div class='col-md-8 review-detail'>
+            <p><em>"You remind me of the babe."</em></p>
+            <p class='review-time'>Date: 6/27/1986</p>
+            <p class='review-name'>Review By: Jareth</p>
+          </div>
+        </div>
+        <div ng-switch-when='4'>
+          <div class='col-md-4'>
+            <img src='../../images/reviewers/jake.png'>
+          </div>
+          <div class='col-md-8 review-detail'>
+            <p><em>"Haha! Observe my magics! "</em></p>
+            <p class='review-time'>Date:5/10/2010</p>
+            <p class='review-name'>Review By: Jake</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class='row form-row'>
     <form name='searchForm' role='search'>
