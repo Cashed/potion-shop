@@ -1,8 +1,8 @@
 <section class='container'>
   <div class='row'>
-    <h2 class='total'>Total: {{ cart.total }}</h2>
+    <h2 class='total'>Total: <span id='money'>{{ cart.total }}</span></h2>
   </div>
   <div ng-repeat='pot in cart.potCart' class='row item'>
-    <pot-item pot='pot' category='' pots='pots'></pot-item>
+    <pot-item pot='pot' category='' pots='pots' minimal='true'></pot-item>
   </div>
 </section>

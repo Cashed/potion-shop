@@ -10,7 +10,8 @@
         restrict: 'E',
         scope: {
           pot: '=',
-          pots: '='
+          pots: '=',
+          minimal: '='
         },
         replace: true,
         templateUrl: 'app/potions/pots.html',

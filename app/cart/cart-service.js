@@ -6,20 +6,23 @@
     .factory('cart', cart);
 
   function cart() {
-     var cart = [];
+    var cart = [];
+    var total = 0;
 
+    // check if pot is already in cart, if so, update qty
     var addItem = function(pot, qty) {
-      // check if pot is already in cart, if so, update qty
       var isUpdate = false;
       cart.forEach(function(item) {
         if (pot._id === item._id) {
           item.qty = qty;
+          total += item.qty * item.price;
           isUpdate = true;
         }
       });
 
       if (!isUpdate) {
         pot.qty = qty;
+        total += pot.qty * pot.price;
         cart.push(pot);
       }
     }
@@ -32,10 +35,15 @@
       return cart;
     };
 
+    var getTotal = function() {
+      return total;
+    }
+
     return {
       addItem: addItem,
       getCartSize: getCartSize,
-      getCart: getCart
+      getCart: getCart,
+      getTotal: getTotal
     }
   }
 })();

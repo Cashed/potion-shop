@@ -30,7 +30,9 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button class='btn btn-success' type='submit'>Add to Bag</button>
+          <button ng-show='minimal' class='btn btn-primary'>Update Qty</button>
+          <button ng-show='minimal' class='btn btn-danger' type='submit'>Remove</button>
+          <button ng-show='!minimal' class='btn btn-success' type='submit'>Add to Bag</button>
         </form>
       </div>
     </div>

@@ -11,6 +11,7 @@
     var vm = this;
 
     vm.potCart = cart.getCart();
+    vm.total = cart.getTotal();
 
     
   }

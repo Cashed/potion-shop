@@ -8,7 +8,6 @@
 body {
   background: url('../images/default-bg.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
   background-color: #010E16;
 }
 
@@ -171,4 +170,8 @@ footer {
 
 .total {
   text-align: center;
+}
+
+#money {
+  color: #45FF45;
 }
