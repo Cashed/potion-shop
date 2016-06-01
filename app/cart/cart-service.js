@@ -66,13 +66,19 @@
       return total;
     };
 
+    var checkoutCart = function() {
+      cart = [];
+      total = 0;
+    }
+
     return {
       addPot: addPot,
       removePot: removePot,
       updatePot: updatePot,
       getCartSize: getCartSize,
       getCart: getCart,
-      getTotal: getTotal
+      getTotal: getTotal,
+      checkoutCart: checkoutCart
     };
   }
 })();
