@@ -15,8 +15,20 @@ body {
   background-image: linear-gradient(to bottom, #083A5E, #010E16);
 }
 
+@media (min-width: 990px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
 .wizard-logo {
   position: absolute;
+}
+
+@media (max-width: 990px) {
+  .wizard-logo {
+    display: none;
+  }
 }
 
 .ng-enter {
@@ -43,6 +55,12 @@ footer {
 }
 
 /*********** Reviews *************/
+
+@media (max-width: 990px) {
+  .review-control {
+    display: none;
+  }
+}
 
 .menu h4 {
   text-align: center;
