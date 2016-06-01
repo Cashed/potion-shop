@@ -23,16 +23,16 @@
         <form name='buy-pot' ng-submit='pots.addToCart(pot, thisPot.qty)'>
           <label for='qty'>Qty:</label>
           <select ng-model='thisPot.qty' name="qty" class="form-control">
-            <option value="" selected>0</option>
+            <option ng-show='!minimal' value="" selected>0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button ng-show='minimal' class='btn btn-primary'>Update Qty</button>
-          <button ng-show='minimal' class='btn btn-danger' type='submit'>Remove</button>
-          <button ng-show='!minimal' class='btn btn-success' type='submit'>Add to Bag</button>
+          <button ng-show='minimal' class='btn btn-primary' name='update' type='submit'>Update Qty</button>
+          <button ng-show='minimal' class='btn btn-danger' name='delete' ng-click='thisPot.remove(pot._id)'>Remove</button>
+          <button ng-show='!minimal' class='btn btn-success' name='add' type='submit'>Add to Bag</button>
         </form>
       </div>
     </div>

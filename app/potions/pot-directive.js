@@ -5,7 +5,9 @@
     .module('potItem', [])
     .directive('potItem', potItem);
 
-    function potItem() {
+    potItem.$inject = ['cart'];
+
+    function potItem(cart) {
       return {
         restrict: 'E',
         scope: {
@@ -15,9 +17,16 @@
         },
         replace: true,
         templateUrl: 'app/potions/pots.html',
-        controller: function($scope) {
+        controller: function($scope, cart) {
           var vm = this;
-        }
+          vm.qty = $scope.pot.qty;
+
+          vm.remove = function(potID) {
+            cart.removePot(potID);
+            $scope.$parent.cart.total = cart.getTotal();
+          }
+        },
+        controllerAs: 'thisPot'
       }
     }
 })();

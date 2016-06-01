@@ -39,11 +39,21 @@
       return total;
     }
 
+    var removePot = function(potID) {
+      for (var i = 0; i < cart.length; i++) {
+        if (potID === cart[i]._id) {
+          total -= cart[i].qty * cart[i].price;
+          cart.splice(i, 1);
+        }
+      }
+    }
+
     return {
       addItem: addItem,
       getCartSize: getCartSize,
       getCart: getCart,
-      getTotal: getTotal
+      getTotal: getTotal,
+      removePot: removePot
     }
   }
 })();

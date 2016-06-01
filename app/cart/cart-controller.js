@@ -12,7 +12,5 @@
 
     vm.potCart = cart.getCart();
     vm.total = cart.getTotal();
-
-    
   }
 })();
