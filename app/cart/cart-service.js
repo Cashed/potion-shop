@@ -10,7 +10,7 @@
     var total = 0;
 
     // check if pot is already in cart, if so, update qty
-    var addItem = function(pot, qty) {
+    var addPot = function(pot, qty) {
       var isUpdate = false;
       cart.forEach(function(item) {
         if (pot._id === item._id) {
@@ -65,12 +65,12 @@
     };
 
     return {
-      addItem: addItem,
+      addPot: addPot,
+      removePot: removePot,
+      updatePot: updatePot,
       getCartSize: getCartSize,
       getCart: getCart,
-      getTotal: getTotal,
-      removePot: removePot,
-      updatePot: updatePot
+      getTotal: getTotal
     };
   }
 })();
