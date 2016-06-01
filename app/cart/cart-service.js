@@ -9,7 +9,7 @@
     var cart = [];
     var total = 0;
 
-    // check if pot is already in cart, if so, update qty
+    // check if pot is already in cart while still shopping, if so, only update qty
     var addPot = function(pot, qty) {
       var isUpdate = false;
       cart.forEach(function(item) {
@@ -45,7 +45,9 @@
             total -= cart[i].price * difference;
           }
           else {
-            cart[i].qty += difference;
+            // parsing because it was a string!
+            var newQty = Number.parseInt(cart[i].qty) + difference;
+            cart[i].qty = newQty;
             total += cart[i].price * difference;
           }
         }
