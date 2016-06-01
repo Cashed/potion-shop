@@ -24,7 +24,12 @@
           vm.remove = function(potID) {
             cart.removePot(potID);
             $scope.$parent.cart.total = cart.getTotal();
-          }
+          };
+
+          vm.update = function(pot, qty) {
+            cart.updatePot(pot, qty);
+            $scope.$parent.cart.total = cart.getTotal();
+          };
         },
         controllerAs: 'thisPot'
       }

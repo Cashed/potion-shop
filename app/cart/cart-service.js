@@ -27,6 +27,31 @@
       }
     }
 
+    var removePot = function(potID) {
+      for (var i = 0; i < cart.length; i++) {
+        if (potID === cart[i]._id) {
+          total -= cart[i].qty * cart[i].price;
+          cart.splice(i, 1);
+        }
+      }
+    }
+
+    var updatePot = function(pot, qty) {
+      for (var i = 0; i < cart.length; i++) {
+        if (pot._id === cart[i]._id) {
+          var difference = Math.abs(cart[i].qty - qty);
+          if (cart[i].qty - qty >= 0) {
+            cart[i].qty -= difference;
+            total -= cart[i].price * difference;
+          }
+          else {
+            cart[i].qty += difference;
+            total += cart[i].price * difference;
+          }
+        }
+      }
+    };
+
     var getCartSize =  function() {
       return cart.length;
     };
@@ -37,23 +62,15 @@
 
     var getTotal = function() {
       return total;
-    }
-
-    var removePot = function(potID) {
-      for (var i = 0; i < cart.length; i++) {
-        if (potID === cart[i]._id) {
-          total -= cart[i].qty * cart[i].price;
-          cart.splice(i, 1);
-        }
-      }
-    }
+    };
 
     return {
       addItem: addItem,
       getCartSize: getCartSize,
       getCart: getCart,
       getTotal: getTotal,
-      removePot: removePot
-    }
+      removePot: removePot,
+      updatePot: updatePot
+    };
   }
 })();
