@@ -1,4 +1,4 @@
-var dbUrl = 'potions';
+var dbUrl = MONGODB_URI || 'potions';
 var mongojs = require('mongojs');
 var db = mongojs(dbUrl).collection('potion');
 
