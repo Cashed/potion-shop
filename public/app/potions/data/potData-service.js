@@ -9,9 +9,9 @@
 
   function potData($http) {
     var getPots = function() {
-      return $http.get('app/potions/data/pots.json').then(
+      return $http.get('http://localhost:3000/potions').then(
         function(pots) {
-          return pots.data.potions;
+          return pots.data;
         }
       );
     };
