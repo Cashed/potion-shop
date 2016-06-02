@@ -14,8 +14,7 @@
       var isUpdate = false;
       cart.forEach(function(item) {
         if (pot._id === item._id) {
-          item.qty = qty;
-          total += item.qty * item.price;
+          updatePot(pot, qty);
           isUpdate = true;
         }
       });
