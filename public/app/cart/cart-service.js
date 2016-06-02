@@ -46,7 +46,7 @@
           else {
             // parsing because it was a string!
             var newQty = Number.parseInt(cart[i].qty) + difference;
-            cart[i].qty = newQty;
+            cart[i].qty = newQty.toString();
             total += cart[i].price * difference;
           }
         }

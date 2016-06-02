@@ -19,7 +19,6 @@
       $timeout(function(){
         cart.checkoutCart();
         $location.path('/');
-        vm.goodbye = false;
       }, 3000);
     }
   }
