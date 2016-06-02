@@ -9,7 +9,7 @@
 
   function potData($http) {
     var getPots = function() {
-      return $http.get('http://localhost:3000/potions').then(
+      return $http.get('/potions').then(
         function(pots) {
           return pots.data;
         }
