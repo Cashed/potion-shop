@@ -1,4 +1,4 @@
-#MEAN potions
+#MEAN Pots
 
 [Live Site](https://mean-pots.herokuapp.com/)
 
